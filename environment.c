@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
  * _getenvironment - Gets an environment Variable
- * @nm : the variable searched in the system environment
+ * @nm: the variable searched in the system environment
  *
- * Return : returns the content of the environment
+ * Return: returns the content of the environment
  */
 char *_getenvironment(const char *nm)
 {
@@ -30,13 +30,15 @@ char *_getenvironment(const char *nm)
  *
  * Return : VOID always
  */
-void _print_env (void)
+void _print_env(void)
 {
-	int j = 0; int i = 0;
+	int j = 0;
+	int i = 0;
+
 	while (environment[i] != NULL)
 	{
 		j = 0;
-		while (environment[j][i]);
+		while (environment[j][i])
 		{
 			_putchar(environment[j][i]);
 			i++;

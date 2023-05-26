@@ -11,7 +11,7 @@
 
 char **tokenize(char *str, char *delim, int len)
 {
-char **tokens = NULL, token = NULL, *tnp = NULL;
+char **tokens = NULL, *token = NULL, *tmp = NULL;
 int tok = 0;
 
 token = malloc(sizeof(char *) * (len + 1));
@@ -30,7 +30,7 @@ tokens[tok_count] = _strdup(token);
 token = strtok(NULL, delim);
 tok_count++;
 }
-token[tok_count] = NULL;
+tokens[tok_count] = NULL;
 
 free(tmp);
 return (tokens);
